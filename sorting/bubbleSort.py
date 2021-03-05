@@ -8,10 +8,10 @@ Created on Mon Dec 21 12:20:00 2020
 
 def bubbleSort(arr):
     for i in range(len(arr)):
+    # Like bubble largest element comes to last in array.
         for j in range(0, len(arr)-i-1):
             if arr[j] > arr[j+1]:
                 arr[j], arr[j+1] = arr[j+1], arr[j]
-
     return arr
 
 

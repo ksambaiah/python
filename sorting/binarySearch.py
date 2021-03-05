@@ -27,6 +27,7 @@ if __name__ == "__main__":
     # array is in ascending order and my input is with in limits
     switch = 0
     if arr[0] > arr[-1]:
+        # Below is elegant way of doing reversing of array
         arr = arr[::-1]
         switch = 1
 
@@ -38,4 +39,7 @@ if __name__ == "__main__":
     if index == -1:
         print('Integer ',  search,  ' not found in the array')
     else:
-        print('array has index at ',  index, ' of the array')
+        if ( switch == 0 ):
+            print('array has index at ',  index, ' of the array')
+        else:
+            print('array has index at ', len(arr) - index, ' of the array')
