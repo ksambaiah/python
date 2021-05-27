@@ -3,7 +3,7 @@
 '''
   Eventhough it is easy program I am writing it to see what -> in
   function definition.
-  @author
+  $author$
 '''
 
 def fib1(n: int) -> int:
