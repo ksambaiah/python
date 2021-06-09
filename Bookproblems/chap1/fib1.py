@@ -7,8 +7,8 @@
 '''
 
 def fib1(n: int) -> int:
-    if n == 1 or n == 0:
-       return 1 
+    if n <= 1: 
+       return n 
     return fib1(n - 1) + fib1(n -2)
 
   
