@@ -11,14 +11,12 @@ def constrainedSubsetSum( nums, k) -> int:
       if q:
         dp[i] = max(q[0], 0) + num
       else:
-        print(num,i)
         dp[i] = num
       while q and q[-1] < dp[i]:
         q.pop()
       q.append(dp[i])
-      print(num, q, dp)
       if i >= k and dp[i - k] == q[0]:
-        q.popleft()
+        r = q.popleft()
     return max(dp)
 
 if __name__ == '__main__':

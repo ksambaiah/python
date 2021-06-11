@@ -21,7 +21,7 @@ def slidingWindow2(arr, num):
 
 if __name__ == '__main__':
 
-   arr = [-10000, 20, 30, -40, 50, 6, 7, 4, 44, 99, 12, 123, -145, 20000000000]
+   arr = [4,2,1,7,8,1,2,8,1,0]
    key = 3
    r = slidingWindow2(arr, key)
    print(arr)
