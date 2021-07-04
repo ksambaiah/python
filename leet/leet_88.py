@@ -6,10 +6,11 @@ You are given two integer arrays nums1 and nums2, sorted in non-decreasing order
 '''
 
 def merge(nums1: List[int], m: int, nums2: List[int], n: int):
-     for i in range(
-         while 
-
-
+    
+    for j in range(n-1, -1, -1):
+        for k in range(m+n-1-j, 0):
+            if 
+        
 if __name__ == '__main__':
     nums1 = [1,2,3,0,0,0]
     m = 3
