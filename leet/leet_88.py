@@ -5,16 +5,27 @@ You are given two integer arrays nums1 and nums2, sorted in non-decreasing order
 
 '''
 
-def merge(nums1: List[int], m: int, nums2: List[int], n: int):
+def merge(nums1, m: int, nums2, n: int):
+    last, i, j = m+n-1, m-1, n-1
     
-    for j in range(n-1, -1, -1):
-        for k in range(m+n-1-j, 0):
-            if 
-        
+    while i >= 0 and j >= 0:
+       if nums1[i] > nums2[j]:
+          nums1[last] = nums1[i]
+          i, last = i-1, last - 1
+       else:
+          nums1[last] = nums2[j]
+          j, last = j-1, last-1
+
+    print(nums1)
+    while j >= 0:
+       nums1[last] = nums2[j]
+       j, last = j-1, last-1
+    return nums1
+     
 if __name__ == '__main__':
-    nums1 = [1,2,3,0,0,0]
-    m = 3
-    nums2 = [2,5,6]
-    n = 3
-   print(nums1, nums2)
-   print(merge(nums1, m, nums2, n))
+    nums1 = [0]
+    m = 0
+    nums2 = [5]
+    n = 1
+    print(nums1, nums2)
+    print(merge(nums1, m, nums2, n))

@@ -14,9 +14,18 @@ class ListNode:
 
 class Solution:
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
-        curr  = l1
-        print("Hi")
-
+        cur = d = ListNode(0)
+        while l1 and l2:
+           if l1.val < l2.val:
+              cur.next = l1
+              l1 = l1.next
+           else:
+              cur.next = l2
+              l2 = l2.next
+           cur = cur.next
+               
+        cur = l1 or l2
+        return d.next
 
 if __name__ == '__main__':
    a = ListNode("1")
@@ -30,4 +39,5 @@ if __name__ == '__main__':
    d.next = e
    f = ListNode("4")
    e.next = f
-   print(d)
+   x =  Solution()
+   print(x.mergeTwoLists(a, d))
