@@ -19,18 +19,19 @@ Explanation: The longest substring with no more than '1' distinct characters is 
 def longest_substring_with_k_distinct(str1, k):
     dict1 = {}
     temp = k
-    l = 0
+    i = 0
     for x in str1:
-      if temp >= 0:
-         l += 1
-         if x in dict1.keys():
+      i += 1
+      if temp >= 1:
+         if x in dict1:
             dict1[x] = dict1[x] + 1
          else:
             temp -= 1
             dict1[x] = 1
       else:
-         if x in dict1.keys() and dict1[x] == 1:
-             
+         while len(dict1.keys()) > k:
+            if 
+                   
 
 
 if __name__ == '__main__':
