@@ -20,7 +20,7 @@ def maxSubArray(a, k):
     return sum
 
 if __name__ == '__main__':
-    a = [2, 1, 5, 1, 3, 2]
-    k = 1
+    a = [2000, 1, 5, 1, 3, 2, 0, 0, 90000]
+    k = 3
     print(a, k)
     print(maxSubArray(a,k))

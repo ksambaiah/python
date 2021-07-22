@@ -20,9 +20,11 @@ def longest_substring_with_k_distinct(str1, k):
     dict1 = {}
     temp = k
     i = 0
+    total = 0
     for x in str1:
       i += 1
       if temp >= 1:
+         total += 1
          if x in dict1:
             dict1[x] = dict1[x] + 1
          else:
